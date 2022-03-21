@@ -68,7 +68,7 @@ function createTheElement() {
 add.addEventListener("click", () => {
   const inp = document.querySelector(".inp");
   const sc = document.querySelector(".sc");
-  if (inp.value.length > 5) {
+  if (inp.value.length > 4) {
     sc.innerHTML += createTheElement().trim();
   } else {
     alert("En Az 5 Harf Girmelisiniz!");
