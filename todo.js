@@ -64,13 +64,21 @@ function createTheElement() {
     `;
   return ele;
 }
-
+window.addEventListener('load', () => {
+  console.log('page is fully loaded');
+  const inp = document.querySelector(".inp");
+  const sc = document.querySelector(".sc");
+  sc.innerhtml += createTheElement(ip);
+  
+});
 add.addEventListener("click", () => {
   const inp = document.querySelector(".inp");
   const sc = document.querySelector(".sc");
+  const text = document.querySelector(".text");
   if (inp.value.length > 4) {
     sc.innerHTML += createTheElement().trim();
-   
+    
+    
   } else {
     alert("En Az 5 Harf Girmelisiniz!");
   }
